@@ -298,13 +298,15 @@ function reverseInteger(num) {
  *   165536 (1+6+5+5+3+6 = 26,  2+6 = 8) => 8
  */
 function getDigitalRoot(num) {
+  const k = true;
   let use = num;
-  while (true) {
+  while (k) {
     const sum = use.toString(10).split('').reduce((prev, curr) => (+prev) + (+curr), 0);
     if (sum > 9) {
       use = sum;
     } else return sum;
   }
+  return '';
 }
 
 /**

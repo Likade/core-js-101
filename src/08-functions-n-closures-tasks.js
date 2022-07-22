@@ -86,7 +86,7 @@ function getPolynom(...args) {
  */
 function memoize(func) {
   let cache;
-  return function () {
+  return () => {
     if (cache === undefined) {
       cache = func();
     }
